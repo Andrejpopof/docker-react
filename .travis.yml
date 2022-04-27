@@ -18,7 +18,9 @@ deploy:
  bucket_name: "elasticbeanstalk-eu-central-1-955756637811"
  bucket_path: "docker"
  on:
-  branch: master
+  branches:
+   only:
+    - main
  access_key_id: $AWS_ACCESS_KEY
  secret_access_key:
    secure: "$AWS_SECRET_KEY"
